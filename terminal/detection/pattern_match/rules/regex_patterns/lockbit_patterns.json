@@ -1,0 +1,5 @@
+{
+  "file_extensions": "\\.(lockbit|encrypted)$",
+  "ransom_note": "(?:Restore-My-Files|LOCKBIT-README).*\\.txt",
+  "encryption_marker": "LOCKBIT-ENC-[A-F0-9]{8}-[A-F0-9]{8}"
+}

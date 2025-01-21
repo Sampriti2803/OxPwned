@@ -1,0 +1,5 @@
+{
+  "file_extensions": "\\.(akira|locked)$",
+  "ransom_note": "(?:README_FOR_DECRYPT|HOW_TO_DECRYPT).*\\.txt",
+  "encryption_marker": "AKIRA-ENCRYPTED-[A-Za-z0-9]{16}"
+}

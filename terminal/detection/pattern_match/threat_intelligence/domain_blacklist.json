@@ -1,0 +1,11 @@
+{
+  "blacklisted_domains": [
+    "freenode.info",
+    "xn--google-abc.xyz",
+    "paypalsecurity.com",
+    "malicious-site.ru",
+    "fake-bank-login.biz",
+    "darkwebmarketplace.com",
+    "crypto-theft.site"
+  ]
+}
