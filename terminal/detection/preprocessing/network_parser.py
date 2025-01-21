@@ -1,17 +1,30 @@
+# network_parser.py
 import scapy.all as scapy
-from .data_cleaner import clean_data
+# from scapy.all import *
 
-def parse_packet(packet):
-    """Extracts relevant fields from a network packet."""
-    if scapy.TCP in packet and scapy.IP in packet:
-        src_ip = packet[scapy.IP].src
-        dst_ip = packet[scapy.IP].dst
-        payload = bytes(packet[scapy.TCP].payload)
-        return {"src_ip": src_ip, "dst_ip": dst_ip, "payload": payload}
-    return None
+class NetworkParser:
+    def __init__(self):
+        pass
 
-def monitor_network(filter="tcp"):
-    """Captures and parses packets."""
-    packets = scapy.sniff(filter=filter, prn=parse_packet, store=0)
-    cleaned_data = [clean_data(packet) for packet in packets if packet]
-    return cleaned_data
+    def capture_packets(self, count=100):
+        """
+        Capture live network packets.
+        :param count: Number of packets to capture.
+        :return: List of captured packets.
+        """
+        print(f"[NetworkParser] Capturing {count} packets...")
+        packets = scapy.sniff(count=count)
+        print(f"[NetworkParser] Captured {len(packets)} packets.")
+        return packets
+
+    def load_pcap(self, file_path):
+        """
+        Load packets from a PCAP file.
+        :param file_path: Path to the PCAP file.
+        :return: List of packets.
+        """
+        print(f"[NetworkParser] Loading packets from {file_path}...")
+        packets = scapy.rdpcap(file_path)
+        print(f"[NetworkParser] Loaded {len(packets)} packets from {file_path}.")
+        return packets
+    
