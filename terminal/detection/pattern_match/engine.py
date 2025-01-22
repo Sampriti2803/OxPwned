@@ -19,11 +19,12 @@ class DetectionEngine:
 
 if __name__ == "__main__":
     # Example usage
-    rules_path = "terminal/detection/pattern_match/rules/regex_patterns"
+    rules_path = "terminal/detection/pattern_match/rules"
     engine = DetectionEngine(rules_path)
-    sample_data = {
-        "domain": "malicious-site.ru",
-        "content": "Some suspicious traffic details.",
-    }
+    # sample_data = {
+    #     "domain": "malicious-site.ru",
+    #     "content": "Some suspicious traffic details.",
+    # }
+    sample_data={'src_ip': None, 'dst_ip': None, 'src_port': 57082, 'dst_port': 3478, 'payload_size': 1210}
     result = engine.detect(sample_data)
     print(json.dumps(result, indent=4))
