@@ -5,7 +5,7 @@ from feature_extractor import FeatureExtractor
 
 # Initialize NetworkParser and capture packets
 parser = NetworkParser()
-captured_packets = parser.capture_packets(count=100)
+captured_packets = parser.capture_packets(count=2)
 
 # Initialize DataCleaner and clean the captured packets
 cleaner = DataCleaner()
