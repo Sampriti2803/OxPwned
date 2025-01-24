@@ -34,6 +34,6 @@ def generate_response(prompt):
 
 
 # Test
-prompt = "What is Retrieval-Augmented Generation?"
+prompt = "What are zero day vul and how do I counter them?"
 response = generate_response(prompt)
 print(response)
