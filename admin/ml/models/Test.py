@@ -28,7 +28,7 @@ def generate_response(prompt):
     inputs = {k: v.to("mps") for k, v in inputs.items()}  # Move tensors to Apple Metal
     with torch.no_grad():
         outputs = model.generate(
-            **inputs, max_new_tokens=100, do_sample=True, top_p=0.95, temperature=0.8
+            **inputs, max_new_tokens=1000, do_sample=True, top_p=0.95, temperature=0.8
         )
     return tokenizer.decode(outputs[0], skip_special_tokens=True)
 
