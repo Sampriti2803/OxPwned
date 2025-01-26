@@ -220,7 +220,6 @@ For detailed architecture and implementation, refer to:
 - [Sampriti Saha](https://github.com/Sampriti2803)
 - [Pranav Rajesh Narayan](https://github.com/pranav-rn)
 - [Kshitij Kota](https://github.com/kshitijkota)
-- [Roshini Ramesh](https://github.com/roshr22)
 
 ---
 
